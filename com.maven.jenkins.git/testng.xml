@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="MavenJenkisGitProject.com.maven.jenkins.git.listener.TestListener" />
+
+		<!-- <listener class-name="com.maven.project.listeners.SuiteListener"/> -->
+		<listener class-name="MavenJenkisGitProject.com.maven.jenkins.git.listener.InvokedMethodListener" />
+		<listener class-name="MavenJenkisGitProject.com.maven.jenkins.git.listener.MethodInterceptorListener" />
+		<listener class-name="MavenJenkisGitProject.com.maven.jenkins.git.listener.ExecutionListener" />
+	</listeners>
+
+	<test name="Test">
+		<classes>
+			<class name="MavenJenkisGitProject.com.maven.jenkins.git.basetest.BaseTest" />
+			<class name="MavenJenkisGitProject.com.maven.jenkins.git.tests.SignUpPageTests" />
+<!-- 			<class name="MavenJenkisGitProject.com.maven.jenkins.git.FirstTest" />
+			<class name="MavenJenkisGitProject.com.maven.jenkins.git.SecondTest" />  
+			<class name="MavenJenkisGitProject.com.maven.jenkins.git.LogGeneration" /> -->
+			<!-- <class name="MavenJenkisGitProject.com.maven.jenkins.git.tests.ExtentSignUpPageTests" /> --> 
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
